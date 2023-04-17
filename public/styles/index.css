@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.55em;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: #8070D4;
+    border: 6px solid rgba(0,0,0,0.2);
+}
+.result{
+    font-size: 0.5rem;
+}
+header{
+    height: 150px;
+    text-align: center;
+    background-image:linear-gradient(to right,rgba(132, 0, 255, 0.705),rgb(7, 113, 184));
+    color: white;
+}
+input{
+    position: absolute;
+    width: 44%;
+    font-size: 0.95rem;
+    margin: -40px 300px 0 30%;
+    opacity: .9;
+}
+.box{
+    margin: 3% 0 0 27%;
+    display: block;
+    border: 2px solid grey;
+    box-shadow:  8px 8px 8px darkgray;
+    padding: 2%;
+    min-width: 40%;
+    max-width: 50%;
+}
+table{
+    width: 100%;
+    font-weight: bolder;
+    font-size: 0.28rem;
+}
+td{
+    padding: 0 30px;
+    width: 100%;
+} 
+.loading {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 2% 0 0 45%;
+}
+.loading div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: rgb(117, 117, 117) transparent transparent transparent;
+}
+.loading div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.loading div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.loading div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+  
+/* Modal Content */
+.modal-content {
+    background-color: #ff8888;
+    margin: auto;
+    font-size: 1rem;
+    padding: 20px;
+    border: 1px solid rgb(245, 26, 26);
+    width: 80%;
+    color: white;
+}
+  
+/* The Close Button */
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 3rem;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+img{
+    height: 55px;
+    width: 60px;
+}
+.left{
+    float: right;
+    display: inline;
+    
+}
+.clear{
+    background-image: linear-gradient(rgb(80, 80, 255),skyblue);
+}
+.sunny{
+    background-image: radial-gradient(circle 150px at 25% 33%, white, rgb(255, 153, 0), lightyellow, aqua);
+}
+.cloudy{
+    background-image:linear-gradient(rgb(76, 76, 83), rgba(70, 70, 70, 0.5));
+    color: white;
+}
+.rain{
+    background-image:linear-gradient(rgb(76, 76, 83), rgba(70, 70, 70, 0.5));
+    background:url('/assets/rain3.jpg');
+    animation: letItRain 1s linear infinite reverse;
+    color: white;
+}
+.snow{
+    background-image:linear-gradient(rgb(76, 76, 83), rgba(70, 70, 70, 0.5));
+    background:url('/assets/snow.png');
+    animation: letItSnow 1s linear infinite;
+    color: white;
+}
+.fog{
+    background: linear-gradient(rgb(76, 76, 83), rgba(216, 206, 206, 1.5));
+    backdrop-filter: blur(5px);
+    color: white;
+}
+@keyframes letItRain {
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 20% 100%;
+    }
+}
+@keyframes letItSnow {
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 20% 100%;
+    }
+}
